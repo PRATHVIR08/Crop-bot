@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CropBot Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="login-container">
+    <div class="login-box">
+      <img src="cropbotbranding.png" alt="CropBot Logo" class="login-logo">
+      <h1 class="login-title">Welcome to CropBot</h1>
+      <p class="login-subtitle">Sign in to access AI agricultural insights</p>
+
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username" required autocomplete="off">
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="login-btn">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      // Simple redirect for demonstration purposes
+      window.location.href = "app.html";
+    }
+  </script>
+
+</body>
+
+</html>
