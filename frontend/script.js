@@ -36,7 +36,7 @@ async function sendMessage() {
   showLoading();
 
   try {
-    const response = await fetch("http://localhost:5000/chat", {
+    const response = await fetch("/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -109,7 +109,7 @@ async function handleImageUpload(file) {
   formData.append("image", file);
 
   try {
-    const res = await fetch("http://localhost:5000/detect", {
+    const res = await fetch("/detect", {
       method: "POST",
       body: formData
     });
