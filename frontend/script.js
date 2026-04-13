@@ -1,3 +1,5 @@
+const BASE_URL = "https://crop-bot-a16l.onrender.com"; // ✅ your Render backend
+
 function appendMessage(role, text) {
   const replySection = document.getElementById("reply");
   const msgDiv = document.createElement("div");
@@ -29,14 +31,13 @@ async function sendMessage() {
   const message = messageInput.value.trim();
   if (!message) return;
 
-  // Append user message
   appendMessage('user', message);
   messageInput.value = "";
 
   showLoading();
 
   try {
-    const response = await fetch("/chat", {
+    const response = await fetch(`${BASE_URL}/chat`, {  // ✅ FIXED
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -64,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Drag and Drop Logic
   const dropzone = document.getElementById("image-dropzone");
   const fileInput = document.getElementById("image-input");
 
@@ -109,7 +109,7 @@ async function handleImageUpload(file) {
   formData.append("image", file);
 
   try {
-    const res = await fetch("/detect", {
+    const res = await fetch(`${BASE_URL}/detect`, {  // ✅ FIXED
       method: "POST",
       body: formData
     });
