@@ -2,13 +2,13 @@
    GLOBAL DARK THEME & VARIABLES
 ========================================= */
 :root {
-  --bg-color: #121212;
+  --bg-color: #000000;
   --card-bg: #000000;
   --accent: #7dd81b;
   --accent-hover: #75ee24;
   --text-color: #eee;
   --subtext-color: #aaa;
-  --input-bg: #1a1a1a;
+  --input-bg: #000000;
   --input-border: #000000;
   --radius: 10px;
   --transition: all 0.25s ease;
